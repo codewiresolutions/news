@@ -1,17 +1,22 @@
 <script setup>
-import EventsView from '@/components/EventsView.vue';
-import FirstView from '@/components/FirstView.vue';
-import HappyView from '@/components/HappyView.vue';
-
-
-
-
+import FirstView from '@/components/FirstView.vue'
+import SocialView from '@/components/SocialView.vue'
+import VideoView from '@/components/VideoView.vue'
+import MoreView from '@/components/MoreView.vue'
+import MagazinesView from '@/components/MagazinesView.vue'
+import NewView from '@/components/NewView.vue'
 </script>
 
 <template>
-  <div>
-<EventsView></EventsView>
-    <HappyView></HappyView>
+  <slot>
+    <div class="bg-customGray">
     <FirstView></FirstView>
-  </div>
+    <SocialView></SocialView>
+    <video-view></video-view>
+      <MagazinesView></MagazinesView>
+      <MoreView></MoreView>
+<new-view></new-view>
+
+    </div>
+  </slot>
 </template>
